@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Music Player | devChallenges.io</title>
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center bg-gradient-to-tr from-purple-900 via-indigo-900 to-gray-900 to-90%">
+    <div
+      class="w-96 bg-gray-900/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 text-center text-white">
+      <!-- CAPA -->
+      <img
+        id="cover"
+        src="https://www.iphonefaq.org/files/styles/large/public/apple_music.jpg"
+        class="w-full h-72 object-cover rounded-xl shadow-lg transition-opacity duration-200 opacity-100" />
+
+      <!-- INFO -->
+      <div class="mt-4">
+        <h2
+          id="title"
+          class="text-lg font-semibold transition-opacity duration-200 opacity-100">
+          Lost in the City Lights
+        </h2>
+        <p
+          id="artist"
+          class="text-sm opacity-80 text-gray-500 transition-opacity duration-200 opacity-100">
+          Cosmo Sheldrake
+        </p>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="mt-4 w-full">
+        <div class="flex justify-between text-xs opacity-80 mb-1">
+          <span
+            class="text-gray-500"
+            id="current-time"
+            >0:00</span
+          >
+          <span
+            class="text-gray-500"
+            id="duration"
+            >0:00</span
+          >
+        </div>
+
+        <div
+          id="progress-container"
+          class="relative w-full h-2 bg-white/20 rounded-full cursor-pointer">
+          <div
+            id="progress"
+            class="absolute h-full bg-purple-500 rounded-full"
+            style="width: 0%"></div>
+          <!-- bolinha -->
+          <div
+            id="thumb"
+            class="absolute w-4 h-4 bg-purple-500 rounded-full -top-1 cursor-grab"
+            style="left: 0%"></div>
+        </div>
+      </div>
+
+      <!-- CONTROLES -->
+      <div class="mt-6 flex items-center justify-center gap-6 text-2xl">
+        <button
+          id="prev"
+          class="opacity-70 hover:opacity-100 transition">
+          <span class="material-symbols-rounded"> fast_rewind </span>
+        </button>
+
+        <button
+          id="play"
+          class="material-symbols-rounded w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:bg-purple-500 transition">
+          play_arrow
+        </button>
+
+        <button
+          id="next"
+          class="opacity-70 hover:opacity-100 transition">
+          <span class="material-symbols-rounded"> fast_forward </span>
+        </button>
+      </div>
+
+      <audio id="audio"></audio>
+    </div>
+
+    <!-- <footer class="author-info">
+      Coded by <a href="#">Your Name Here</a> | Challenge by
+      <a
+        href="https://www.devchallenges.io?ref=challenge"
+        target="_blank"
+        >devChallenges.io</a
+      >.
+    </footer> -->
+    <script src="script.js"></script>
+  </body>
+</html>
