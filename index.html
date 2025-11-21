@@ -18,91 +18,101 @@
     <title>Music Player | devChallenges.io</title>
   </head>
   <body
-    class="min-h-screen flex items-center justify-center bg-gradient-to-tr from-purple-900 via-indigo-900 to-gray-900 to-90%">
-    <div
-      class="w-96 bg-gray-900/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 text-center text-white">
-      <!-- CAPA -->
-      <img
-        id="cover"
-        src="https://www.iphonefaq.org/files/styles/large/public/apple_music.jpg"
-        class="w-full h-72 object-cover rounded-xl shadow-lg transition-opacity duration-200 opacity-100" />
+    class="bg-gradient-to-tr from-purple-900 via-indigo-900 to-gray-900 to-90%">
+    <main class="min-h-screen flex flex-col items-center justify-center">
+      <div
+        class="w-80 md:w-96 bg-gray-900/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 text-center text-white">
+        <!-- CAPA -->
+        <img
+          id="cover"
+          src="https://www.iphonefaq.org/files/styles/large/public/apple_music.jpg"
+          class="w-full h-72 object-cover rounded-xl shadow-lg transition-opacity duration-200 opacity-100" />
 
-      <!-- INFO -->
-      <div class="mt-4">
-        <h2
-          id="title"
-          class="text-lg font-semibold transition-opacity duration-200 opacity-100">
-          Lost in the City Lights
-        </h2>
-        <p
-          id="artist"
-          class="text-sm opacity-80 text-gray-500 transition-opacity duration-200 opacity-100">
-          Cosmo Sheldrake
-        </p>
-      </div>
-
-      <!-- PROGRESS -->
-      <div class="mt-4 w-full">
-        <div class="flex justify-between text-xs opacity-80 mb-1">
-          <span
-            class="text-gray-500"
-            id="current-time"
-            >0:00</span
-          >
-          <span
-            class="text-gray-500"
-            id="duration"
-            >0:00</span
-          >
+        <!-- INFO -->
+        <div class="mt-4">
+          <h2
+            id="title"
+            class="text-lg font-semibold transition-opacity duration-200 opacity-100">
+            Lost in the City Lights
+          </h2>
+          <p
+            id="artist"
+            class="text-sm opacity-80 text-gray-500 transition-opacity duration-200 opacity-100">
+            Cosmo Sheldrake
+          </p>
         </div>
 
-        <div
-          id="progress-container"
-          class="relative w-full h-2 bg-white/20 rounded-full cursor-pointer">
+        <!-- PROGRESS -->
+        <div class="mt-4 w-full">
+          <div class="flex justify-between text-xs opacity-80 mb-1">
+            <span
+              class="text-gray-500"
+              id="current-time"
+              >0:00</span
+            >
+            <span
+              class="text-gray-500"
+              id="duration"
+              >0:00</span
+            >
+          </div>
+
           <div
-            id="progress"
-            class="absolute h-full bg-purple-500 rounded-full"
-            style="width: 0%"></div>
-          <!-- bolinha -->
-          <div
-            id="thumb"
-            class="absolute w-4 h-4 bg-purple-500 rounded-full -top-1 cursor-grab"
-            style="left: 0%"></div>
+            id="progress-container"
+            class="relative w-full h-1 bg-white/20 rounded-full cursor-pointer">
+            <div
+              id="progress"
+              class="absolute h-full bg-purple-500 rounded-full"
+              style="width: 0%"></div>
+            <!-- bolinha -->
+            <div
+              id="thumb"
+              class="absolute w-3 h-3 bg-purple-500 rounded-full -top-1 cursor-grab"
+              style="left: 0%"></div>
+          </div>
         </div>
+
+        <!-- CONTROLES -->
+        <div class="mt-6 flex items-center justify-center gap-6 text-2xl">
+          <button
+            id="prev"
+            class="opacity-70 hover:opacity-100 transition">
+            <span class="material-symbols-rounded"> fast_rewind </span>
+          </button>
+
+          <button
+            id="play"
+            class="material-symbols-rounded w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:bg-purple-500 transition">
+            play_arrow
+          </button>
+
+          <button
+            id="next"
+            class="opacity-70 hover:opacity-100 transition">
+            <span class="material-symbols-rounded"> fast_forward </span>
+          </button>
+        </div>
+
+        <audio id="audio"></audio>
       </div>
 
-      <!-- CONTROLES -->
-      <div class="mt-6 flex items-center justify-center gap-6 text-2xl">
-        <button
-          id="prev"
-          class="opacity-70 hover:opacity-100 transition">
-          <span class="material-symbols-rounded"> fast_rewind </span>
-        </button>
+      <footer class="mt-12 text-center text-white text-sm opacity-60">
+        Coded by
+        <a
+          class="underline text-indigo-400 hover:text-purple-400"
+          href="https://github.com/afrataiza/music-player"
+          >Afra Taíza</a
+        >
+        | Challenge by
+        <a
+          href="https://www.devchallenges.io?ref=challenge"
+          target="_blank"
+          class="underline text-indigo-400 hover:text-purple-400"
+          >devChallenges.io</a
+        >.
+      </footer>
+    </main>
 
-        <button
-          id="play"
-          class="material-symbols-rounded w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:bg-purple-500 transition">
-          play_arrow
-        </button>
-
-        <button
-          id="next"
-          class="opacity-70 hover:opacity-100 transition">
-          <span class="material-symbols-rounded"> fast_forward </span>
-        </button>
-      </div>
-
-      <audio id="audio"></audio>
-    </div>
-
-    <!-- <footer class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a
-        href="https://www.devchallenges.io?ref=challenge"
-        target="_blank"
-        >devChallenges.io</a
-      >.
-    </footer> -->
     <script src="script.js"></script>
   </body>
 </html>
